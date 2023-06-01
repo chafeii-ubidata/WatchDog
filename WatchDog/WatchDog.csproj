@@ -20,7 +20,11 @@
 		<IncludeSymbols>True</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
-
+  <PropertyGroup>
+    <PackageId>WatchDog</PackageId>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/chafeii-ubidata/WatchDog</RepositoryUrl>
+  </PropertyGroup>
 	<ItemGroup>
 		<None Remove="src\WatchPage\**" />
 		<EmbeddedResource Include="src\WatchPage\**" />
