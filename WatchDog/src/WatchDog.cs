@@ -53,7 +53,7 @@ namespace WatchDog.src
 
                 var watchLog = new WatchLog
                 {
-                    IpAddress = context.Connection.RemoteIpAddress.ToString(),
+                    IpAddress = context.Connection?.RemoteIpAddress?.ToString() ?? "NULL",
                     ResponseStatus = responseLog.ResponseStatus,
                     QueryString = requestLog.QueryString,
                     Method = requestLog.Method,
