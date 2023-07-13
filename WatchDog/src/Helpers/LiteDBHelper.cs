@@ -1,4 +1,5 @@
 ﻿using LiteDB;
+using System;
 using WatchDog.src.Models;
 
 namespace WatchDog.src.Helpers
@@ -34,7 +35,15 @@ namespace WatchDog.src.Helpers
         }
         public static int InsertWatchLog(WatchLog log)
         {
-            return _watchLogs.Insert(log);
+            try
+            {
+                return _watchLogs.Insert(log);
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return -1;
+            }
         }
 
         public static int ClearWatchLog()
